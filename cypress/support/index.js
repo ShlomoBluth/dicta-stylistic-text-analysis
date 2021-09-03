@@ -15,6 +15,8 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import 'cypress-file-upload'
+import '../../dicta-shared/index.js'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
