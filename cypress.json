@@ -13,6 +13,8 @@
         "configFile": "dicta-shared/reporter-config.json"
     },
     "env":{
+        "DEV_URL":"",
+        "LIVE_URL":"https://generalclassify.dicta.org.il/#/",
         "TOOL_TESTS":true,
         "REQUESTS_TESTS":true
     }
