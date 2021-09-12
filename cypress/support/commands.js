@@ -28,6 +28,7 @@ Cypress.Commands.add('selectTanachText',({collection,book='',popupInner=''})=>{
 })
 
 Cypress.Commands.add('selectUploudfile',({file,popupInner=''})=>{
+    cy.get('div[class="text-selection-popup"]').should('have.css','display','none')
     cy.get('p').contains('Click Select to choose text(s).')
     .first().parent().siblings('button').click({force: true})
     if(popupInner==true){
