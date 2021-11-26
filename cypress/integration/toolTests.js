@@ -62,7 +62,7 @@ urls.forEach((urlValue,urlKey)=>{
                 cy.selectUploudfile({
                     file:'Leviticus.txt',
                     popupInner:true
-                })
+                })  
                 cy.waitForUploading()
                 cy.get('button').contains('Classify Text').click({force: true})
                 cy.get(':nth-child(9) > .bar').should('have.css','background-color','rgb(204, 0, 193)')
