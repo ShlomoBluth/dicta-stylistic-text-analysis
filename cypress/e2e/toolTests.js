@@ -29,11 +29,13 @@ urls.forEach((urlValue,urlKey)=>{
                 cy.get('button').contains('Start Experiment').click()
                 cy.selectTanachText({
                     collection:'Torah',
-                    book:'Genesis'
+                    book:'Genesis',
+                    class: '1'
                 })
                 cy.selectTanachText({
                     collection:'Torah',
-                    book:'Exodus'
+                    book:'Exodus',
+                    class: '2'
                 })
                 cy.get('button').contains('Analyze Classes').click({force: true})
                 cy.get(':nth-child(1) > .v-spinner > .v-clip',{timeout:1000*60}).should('not.exist')
