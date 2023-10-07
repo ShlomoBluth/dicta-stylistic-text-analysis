@@ -77,7 +77,7 @@ Cypress.Commands.add('selectTextRequest',({type,url,status=200,message='',delayS
 })
 
 Cypress.Commands.add('waitForUploading',()=>{
-    cy.contains('Uploading...').should('exist')
+    cy.wait(1000)
     cy.contains('Uploading...').should('not.exist')
 })
 

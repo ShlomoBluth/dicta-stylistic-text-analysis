@@ -65,8 +65,8 @@ urls.forEach((urlValue,urlKey)=>{
                     file:'Leviticus.txt',
                     popupInner:true
                 })  
-                cy.waitForUploading()
-                cy.get('button').contains('Classify Text').click({force: true})
+                cy.waitForUploading()           
+                cy.get('button[class="button lg bg-blue pull-right hoverable analyze"]').contains('Classify Text').click({force: true})
                 cy.get(':nth-child(9) > .bar').should('have.css','background-color','rgb(204, 0, 193)')
             
                 
