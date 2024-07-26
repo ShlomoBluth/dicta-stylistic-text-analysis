@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/ShlomoBluth/dicta-stylistic-text-analysis#readme",
   "devDependencies": {
-    "cypress": "^13.3.0",
+    "cypress": "^8.3.1",
     "cypress-file-upload": "^5.0.8",
     "cypress-multi-reporters": "^1.5.0",
     "mocha": "^9.1.1",
