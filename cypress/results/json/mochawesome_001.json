@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-10-06T11:09:45.741Z",
+    "end": "2023-10-06T11:10:27.508Z",
+    "duration": 41767,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2824565a-581e-48a7-8629-d2ca1da518c1",
+      "title": "",
+      "fullFile": "cypress\\e2e\\toolTests.js",
+      "file": "cypress\\e2e\\toolTests.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d2029e1a-4ab7-4cb6-8b5e-78c6ef0be22d",
+          "title": "toolTests live desktop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Run tanach",
+              "fullTitle": "toolTests live desktop Run tanach",
+              "timedOut": null,
+              "duration": 23005,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/toolTests.js.mp4\"",
+              "code": "cy.get('button').contains('Start Experiment').click();\ncy.selectTanachText({\n  collection: 'Torah',\n  book: 'Genesis',\n  class: '1'\n});\ncy.selectTanachText({\n  collection: 'Torah',\n  book: 'Exodus',\n  class: '2'\n});\ncy.get('button').contains('Analyze Classes').click({\n  force: true\n});\ncy.get(':nth-child(1) > .v-spinner > .v-clip', {\n  timeout: 1000 * 60\n}).should('not.exist');\ncy.get('button[data-target=\"#text_for_classification_popup\"]').click({\n  force: true\n});\ncy.selectTanachText({\n  collection: 'Torah',\n  book: 'Numbers',\n  popupInner: 'true'\n});\ncy.get('button').contains('Classify Text').click({\n  force: true\n});\ncy.get(':nth-child(13) > .bar').should('have.css', 'background-color', 'rgb(204, 0, 193)');",
+              "err": {},
+              "uuid": "6f55c4ef-de56-4d5f-94ed-34b0e2a793e8",
+              "parentUUID": "d2029e1a-4ab7-4cb6-8b5e-78c6ef0be22d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Run files",
+              "fullTitle": "toolTests live desktop Run files",
+              "timedOut": null,
+              "duration": 18545,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/toolTests.js.mp4\"",
+              "code": "cy.get('button').contains('Start Experiment').click({\n  force: true\n});\ncy.url().should('eq', 'https://generalclassify.dicta.org.il/#/experiment');\ncy.selectUploudfile({\n  file: 'Genesis.txt'\n});\ncy.waitForUploading();\ncy.selectUploudfile({\n  file: 'Exodus.txt'\n});\ncy.waitForUploading();\ncy.get('button').contains('Analyze Classes').click({\n  force: true\n});\ncy.get(':nth-child(1) > .v-spinner > .v-clip', {\n  timeout: 1000 * 60\n}).should('not.exist');\ncy.get('button[data-target=\"#text_for_classification_popup\"]').click({\n  force: true\n});\ncy.selectUploudfile({\n  file: 'Leviticus.txt',\n  popupInner: true\n});\ncy.waitForUploading();\ncy.get('button').contains('Classify Text').click({\n  force: true\n});\ncy.get(':nth-child(9) > .bar').should('have.css', 'background-color', 'rgb(204, 0, 193)');\n// cy.get('button').contains('Analyze Classes').click({force: true})\n// cy.get(':nth-child(1) > .v-spinner > .v-clip',{timeout:1000*60}).should('not.exist')\n// cy.get('button[data-target=\"#text_for_classification_popup\"]').click({force: true})\n// cy.selectText({\n//     collection:'Torah',\n//     book:'Numbers',\n//     popupInner:'true'\n// })\n// cy.get('button').contains('Classify Text').click({force: true})\n// cy.get(':nth-child(13) > .bar').should('have.css','background-color','rgb(204, 0, 193)')",
+              "err": {},
+              "uuid": "0925cc1a-9828-4d50-916e-93c15589a247",
+              "parentUUID": "d2029e1a-4ab7-4cb6-8b5e-78c6ef0be22d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6f55c4ef-de56-4d5f-94ed-34b0e2a793e8",
+            "0925cc1a-9828-4d50-916e-93c15589a247"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 41550,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

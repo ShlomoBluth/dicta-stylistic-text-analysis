@@ -29,11 +29,13 @@ urls.forEach((urlValue,urlKey)=>{
                 cy.get('button').contains('Start Experiment').click()
                 cy.selectTanachText({
                     collection:'Torah',
-                    book:'Genesis'
+                    book:'Genesis',
+                    class: '1'
                 })
                 cy.selectTanachText({
                     collection:'Torah',
-                    book:'Exodus'
+                    book:'Exodus',
+                    class: '2'
                 })
                 cy.get('button').contains('Analyze Classes').click({force: true})
                 cy.get(':nth-child(1) > .v-spinner > .v-clip',{timeout:1000*60}).should('not.exist')
@@ -63,8 +65,8 @@ urls.forEach((urlValue,urlKey)=>{
                     file:'Leviticus.txt',
                     popupInner:true
                 })  
-                cy.waitForUploading()
-                cy.get('button').contains('Classify Text').click({force: true})
+                cy.waitForUploading()           
+                cy.get('button[class="button lg bg-blue pull-right hoverable analyze"]').contains('Classify Text').click({force: true})
                 cy.get(':nth-child(9) > .bar').should('have.css','background-color','rgb(204, 0, 193)')
             
                 
