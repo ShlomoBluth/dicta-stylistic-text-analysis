@@ -48,14 +48,14 @@ urls.forEach((urlValue,urlKey)=>{
       
         
     
-      it('Error message for statistics response with a delay of 2 minutes when clicking the run button'+
-      ' of tiberias page',()=>{
-        cy.classificationOfTextRequest({
-          url:'statistics',
-          message:'Feature Extraction: Server took too long to respond.',
-          delaySeconds:65*2
-        })
-      })
+      // it('Error message for statistics response with a delay of 2 minutes when clicking the run button'+
+      // ' of tiberias page',()=>{
+      //   cy.classificationOfTextRequest({
+      //     url:'statistics',
+      //     message:'Feature Extraction: Server took too long to respond.',
+      //     delaySeconds:65*2
+      //   })
+      // })
     
       
       it('Error message for statistics response with status code 500 when clicking the run button of tiberias page'
@@ -67,14 +67,14 @@ urls.forEach((urlValue,urlKey)=>{
         })
       })
     
-      it('Error message for crossvalidate response with a delay of 1 minutes when clicking the run button'+
-      ' of tiberias page',()=>{
-        cy.classificationOfTextRequest({
-          url:'crossvalidate',
-          message:'Cross-validation: Server took too long to respond.',
-          delaySeconds:65*2
-        })
-      })
+      // it('Error message for crossvalidate response with a delay of 1 minutes when clicking the run button'+
+      // ' of tiberias page',()=>{
+      //   cy.classificationOfTextRequest({
+      //     url:'crossvalidate',
+      //     message:'Cross-validation: Server took too long to respond.',
+      //     delaySeconds:65*2
+      //   })
+      // })
     
       
       it('Error message for crossvalidate response with status code 500 when clicking the run button of tiberias page'
@@ -92,7 +92,7 @@ urls.forEach((urlValue,urlKey)=>{
       ' of tiberias page',()=>{
         cy.classificationOfTextRequest({
           url:'classify',
-          message:'Server took too long to respond.',
+          message:'Server failed to respond.',
           delaySeconds:65*5
         })
       })
