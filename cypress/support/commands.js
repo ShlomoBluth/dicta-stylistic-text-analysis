@@ -51,7 +51,7 @@ Cypress.Commands.add('selectUploudfile',({file,popupInner=''})=>{
 
 Cypress.Commands.add('selectTextRequest',({type,url,status=200,message='',delaySeconds=0})=>{
     cy.intercept('POST','**'+url, {
-        delayMs:1000*delaySeconds,
+        delay:1000*delaySeconds,
         statusCode: status
     })
     cy.get('button').contains('Start Experiment').click({force: true})
@@ -105,7 +105,7 @@ Cypress.Commands.add('tastMessage',({HtmlElement,delaySeconds=0,message='',spinn
 
 Cypress.Commands.add('classificationOfTextRequest',({url,status=200,message='',delaySeconds=0})=>{
     cy.intercept('POST','**'+url, {
-        delayMs:1000*delaySeconds,
+        delay:1000*delaySeconds,
         statusCode: status
     })
     cy.get('button').contains('Start Experiment').click({force: true})
